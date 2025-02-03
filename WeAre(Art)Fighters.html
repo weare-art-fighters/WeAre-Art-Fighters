@@ -1,0 +1,426 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Are (Art)Fighters</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #d8eaff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        .logo {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .logo img {
+            max-width: 150px; 
+            height: auto;
+        }
+
+        .main-header {
+            background: white;
+            color: #2a7de1;
+            padding: 30px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .main-header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .main-header p {
+            font-size: 2rem;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .navbar {
+            background: #2a7de1;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0px;
+        }
+
+
+        .navbar a:hover {
+            background: white;
+            color: #2a7de1;
+            border-radius: 5px;
+        }
+
+        .section {
+            padding: 50px 0;
+            background: white;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #2a7de1;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .artworks-list {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1rem;
+            line-height: 2;
+            margin: 0 auto;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .artworks-list li {
+            color: #333;
+        }
+
+        .main-footer {
+            background: #2a7de1;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        #contact {
+            background: white;
+            padding: 50px 0;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact h2 {
+            font-size: 2rem;
+            color: #2a7de1;
+            margin-bottom: 20px;
+        }
+
+        #contact p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .social-links {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .social-links li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        .social-links a {
+            color: #2a7de1;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: #2a7de1;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .main-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .main-header p {
+        font-size: 1.5rem;
+    }
+
+    .navbar .container {
+        flex-direction: row;
+        gap: 3px;
+        justify-content: center;
+    }
+
+    .navbar a {
+        padding: 3px 8px;
+        font-size: 0.9rem;
+        text-align: center;
+        line-height: 1.2;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+    }
+
+    .section {
+        padding: 30px 10px;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+
+    .artworks-list {
+        font-size: 1rem;
+    }
+
+    .main-footer {
+        font-size: 0.8rem;
+    }
+
+    .social-links li {
+        margin: 0 10px;
+    }
+
+    .contact-info a {
+        font-size: 0.8rem;
+
+    }
+</style>
+
+   <style>
+        .lang { display: none; }
+        .lang.active { display: block; }
+        .language-buttons {
+            margin-bottom: 20px;
+        }
+        .language-buttons button {
+            margin-right: 10px;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+        .language-buttons button.active {
+            background-color: #007BFF;
+            color: #fff;
+            border-color: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Language Selection Buttons -->
+    <div class="language-buttons">
+        <button data-lang="en" class="active">English</button>
+        <button data-lang="pol">Polski</button>
+    </div>
+
+    <!-- Logo Section -->
+    <div class="logo">
+        <img src="weareartfighterslogo.png" alt="We Are Art Fighters Logo">
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1>We Are (Art)Fighters</h1>
+            <span class="lang en active"><p style="font-size: 20px;">A way to help by creating</p></span>
+            <span class="lang pol"><p style="font-size: 20px;">Pomoc poprzez tworzenie</p></span>
+
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="container"> 
+        <span class="lang en active"><a href="#about">About</a></span>
+        <span class="lang pol"><a href="#about">O nas</a></span>
+        <span class="lang en active"><a href="#theme">Current Topic</a></span>
+        <span class="lang pol"><a href="#theme">Aktualny Temat</a></span>
+        <span class="lang en active"><a href="#artworks">Artworks</a></span>
+        <span class="lang pol"><a href="#artworks">Prace</a></span>
+        <span class="lang en active"><a href="#contact">Contact</a></span>
+        <span class="lang pol"><a href="#contact">Kontakt</a></span> 
+    </div>
+</nav>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <span class="lang en active"><h2>About Us</h2></span>
+            <span class="lang pol"><h2>O nas</h2></span>
+            <span class="lang en active"><p>"We Are (Art)Fighters" is a project made in partnership with Stowarzyszenie Łatwo Pomagać, created in order to raise funds for children in the oncology department  through creating art challenges. Raised funds will be used to purchase things like books, mugs, board games, crayons, headphones, diamond mosaic, pillows, stress relief coloring pages, water bottles. The theme of the challenges is centered around superheroes and superpowers. The details about the current topic can be found below.</p></span>
+            <span class="lang pol"><p>"We Are (Art)Fighters" to projekt podjęty we współpracy ze Stowarzyszeniem Łatwo Pomagać, zajmujący się zbiórką pieniędzy na dzieci z oddziału onkologicznego poprzez tworzenie tzw. "wyzwań artystycznych". Uzyskane środki zostaną przeznaczone na przedmioty dla dzieci na oddziałach onkologicznych, takie jak: książki, kubki, słuchawki, diamentowe mozaiki, gry planszowe, poduszki, kolorowanki relaksacyjne, bidony, kredki, breloki do kluczy, skarpetki w śmieszne wzory. Tematyka wyzwania obraca się dookoła superbohaterów i supermocy, a szczegóły odnośnie teraźniejszego tematu zamieszczone są poniżej. </p></span>
+		<section id="rules">
+    <span class="lang en active"><p><a href="RULES.pdf" download>Download rules here!</a></p></span>
+    <span class="lang pol"><p><a href="REGULAMIN.pdf" download>Pobierz regulamin tutaj!</a></p></span>
+
+    <span class="lang en active"><p><b>You can donate to the cause by clicking <a href="https://www.siepomaga.pl/we-are-artfighters?fbclid=PAZXh0bgNhZW0CMTEAAaZbhOoIuAYv2vHaYvrar-VukszeCsCTTHiIpEi_ZaelqZUQolx5Q6G9EmE_aem_hJ9xsPGzkGEb0Wl0YaToFQ" download>here</a></p></b></span>
+    <span class="lang pol"><p><b>Możesz wesprzeć akcję przesyłając dotację <a href="https://www.siepomaga.pl/we-are-artfighters?fbclid=PAZXh0bgNhZW0CMTEAAaZbhOoIuAYv2vHaYvrar-VukszeCsCTTHiIpEi_ZaelqZUQolx5Q6G9EmE_aem_hJ9xsPGzkGEb0Wl0YaToFQ" download>tutaj</a></p></b></span>
+
+    </div>
+</section>
+            </p>
+        </div>
+    <section id="theme" class="section">
+        <div class="container">
+            <span class="lang en active"><h2>Current Topic</h2></span>
+            <span class="lang pol"><h2>Aktualny Temat</h2></span>
+            <span class="lang en active"><h2><p>The current topic is <span style="font-weight: bold; color: #1b35a8;=">"Draw a character with a winter superpower"</span>!</p></h2></span>
+            <span class="lang pol"><h2><p>Aktualnym tematem jest <span style="font-weight: bold; color: #1b35a8;=">"Narysuj postać z zimową supermocą"</span>!</p></h2></span>
+            <span class="lang en active"><p style="font-size: 17px;">You can draw an original character or a chosen character from a movie, book, comic book etc.</p></span>
+            <span class="lang pol"><p style="font-size: 17px;">Można narysować postać orginalną lub wybraną postać z filmu, książki, komiksu itp.</p></span>
+
+               
+    </div>
+    </section>
+
+
+<!-- Artworks Section -->
+<section id="artworks" class="section">
+    <div class="container">
+        <span class="lang en active"><h2>Art</h2></span>
+        <span class="lang pol"><h2>Prace</h2></span>
+        <span class="lang en active"><p>Here are some of the artworks made by the children we are helping</p></span>
+        <span class="lang pol"><p>Oto niektóre z prac wykonanych przez dzieci, którym pomagamy</p></span>
+        <ul class="artworks-list" style="list-style: none; padding: 0; margin: 0 auto; display: flex; justify-content: center; gap: 45px; width: fit-content;">
+            <div class="pc">
+                <li><img src="1000018957.jpg" alt="Image 1" style="width: 250px; height: auto;"></li>
+                <li><img src="1000018959.jpg" alt="Image 2" style="width: 250px; height: auto;"></li>
+                <li><img src="ZosiaNowicka.jpeg" alt="Image 3" style="width: 450px; height: auto;"></li>
+            </div>
+            <div class="mobile">
+                <li><img src="1000018957.jpg" alt="Image 1" style="width: 200px; height: auto;"></li>
+                <li><img src="1000018959.jpg" alt="Image 2" style="width: 200px; height: auto;"></li>
+                <li><img src="ZosiaNowicka.jpeg" alt="Image 3" style="width: 350px; height: auto;"></li>
+            </div>
+        </ul>
+    </div>
+</section>
+
+<style>
+    .pc {
+        display: flex;
+        justify-content: center;
+        gap: 45px;
+    }
+    .pc {
+        display: flex;
+    }
+    .mobile {
+        display: none;
+    }
+    @media screen and (max-width: 768px) {
+        .pc {
+            display: none;
+        }
+        .mobile {
+            display: flex;
+        }
+    }
+</style>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <span class="lang en active"><h2>Contact</h2></span>
+            <span class="lang pol"><h2>Kontakt</h2></span>
+            <span class="lang en active"><p>To contact us and send your work or learn more about the cause, reach out using any of the options below</p></span>
+            <span class="lang pol"><p>Aby skontaktować się z nami i wysłać swoje prace lub dowiedzieć się więcej o sprawie, skontaktuj się z nami korzystając z jednej z opcji poniżej</p></span>
+
+
+    <script>
+        // Set the default language (English in this case)
+        const defaultLang = "en";
+
+        // Select all buttons and content elements
+        const buttons = document.querySelectorAll(".language-buttons button");
+        const langElements = document.querySelectorAll(".lang");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", function () {
+                const selectedLang = this.getAttribute("data-lang");
+
+                // Update active button styles
+                buttons.forEach(btn => btn.classList.remove("active"));
+                this.classList.add("active");
+
+                // Hide all language-specific elements
+                langElements.forEach(el => el.classList.remove("active"));
+
+                // Show the selected language elements
+                document.querySelectorAll(`.lang.${selectedLang}`).forEach(el => el.classList.add("active"));
+            });
+        });
+    </script>
+
+            
+            <!-- Social Links -->
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/profile.php?id=61570422562151" target="_blank">Facebook</a></li>
+                <li><a href="https://www.instagram.com/weare_art_fighters/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@weare.art.fighters?lang=pl-PL" target="_blank">TikTok</a></li>
+		<li><a href="https://www.youtube.com/channel/UC5uL91DxgbEk8swihbYOI_w" target="_blank">YouTube</a></li>
+            </ul>
+            
+            <!-- Email Link -->
+            <div class="contact-info">
+                <p>Email: weare.art.fighters@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+    </footer>
+</body>
+</html>
